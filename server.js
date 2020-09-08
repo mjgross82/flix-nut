@@ -11,6 +11,7 @@ var PORT = process.env.PORT || 8080;
 var db = require("./models");
 
 var app = express();
+app.set("port", PORT);
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 app.use(express.static("public"));
